@@ -1,4 +1,4 @@
-import React from 'react'
+
 import './Nav.css';
 import { FaShopify } from "react-icons/fa";
 import { AiOutlineShoppingCart } from "react-icons/ai";

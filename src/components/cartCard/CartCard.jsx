@@ -1,4 +1,4 @@
-import React from 'react'
+
 import "./cartCard.css"
 import { MdDelete } from "react-icons/md";
 import { useDispatch } from 'react-redux';

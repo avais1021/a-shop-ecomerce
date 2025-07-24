@@ -1,4 +1,4 @@
-import React from 'react'
+
 import "./product.css"
 import { useDispatch } from 'react-redux';
 // import {AddItem} from "../../reduxToolkit/cartslice.js"
