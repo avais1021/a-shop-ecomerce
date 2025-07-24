@@ -1,0 +1,84 @@
+
+.navbar_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: rgb(3, 0, 40);
+}
+
+.navbar_bottom {
+    background: rgb(45, 44, 44);
+    padding: 10px 20px;
+}
+
+.navbar .logo {
+    font-size: 20px;
+    display: flex;
+    gap: 10px;
+    color: white;
+}
+/* .navbar .logo h2{
+    font-family: "BioRhyme Expanded", serif;
+} */
+
+.navbar .logo svg {
+    font-size: 40px;
+}
+
+
+.searchbar {
+    background-color: white;
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 15px;
+
+}
+
+.searchbar input::placeholder {
+    color: black;
+}
+
+.searchbar input {
+    max-width: 400px;
+    width: 100%;
+    background: none;
+    color: black;
+    border: none;
+    outline: none;
+    font-size: 20px;
+}
+
+.searchbar svg {
+    color: black;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.cart{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: right; */
+}
+.cart span{
+    text-align: right;
+}
+.cart svg{
+    color: white;
+    font-size: 40px;
+}
+.navbar_bottom ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar_bottom li {
+    color: white;
+}
