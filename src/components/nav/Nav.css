@@ -59,7 +59,7 @@
     cursor: pointer;
 }
 
-.cart{
+.navbar_top .cart{
     color: white;
     display: flex;
     flex-direction: column;
@@ -81,4 +81,12 @@
 
 .navbar_bottom li {
     color: white;
+}
+
+.totalValue {
+    text-align: center;
+}
+
+.totalValue p{
+    margin-bottom: 10px;
 }
