@@ -31,3 +31,10 @@
     margin-top: 20px;
     font-weight: bold;
 }
+
+
+@media screen and (max-width : 768px) {
+   .banner img{
+    height: 285px;
+   }
+}

@@ -44,3 +44,18 @@
 .product p {
     margin-bottom: 20px;
 }
+
+@media screen and (max-width : 768px) {
+    .product .image {
+        height: 150px;
+        margin: 5px auto;
+    }
+
+    .product p {
+        margin-bottom: 10px;
+    }
+
+    .product {
+        min-height: 360px;
+    }
+}
