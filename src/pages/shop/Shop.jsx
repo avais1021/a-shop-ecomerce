@@ -1,23 +1,52 @@
 import { FaShopify } from "react-icons/fa";
 import "./shop.css"
 import { category } from "../../category";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Product from "../../components/product/Product";
 import { dummydata } from "../../dummydata";
+import { useDispatch, useSelector } from "react-redux";
+import { getSerachVal } from "../../reduxToolkit/dataSlice";
 const Shop = () => {
-
+    const dispatch = useDispatch();
     let [productData, setProductData] = useState(dummydata)
 
+    console.log(productData, 'productData');
+
+    const [selectedCategory, setSelectedCategory] = useState("")
+
+    const inputVal = useSelector(state => state.dataSlice.serachVal);
+
+    console.log(inputVal, 'inputVal');
+
     const filterProduct = (category) => {
+
+        dispatch(getSerachVal(""))
+        setSelectedCategory(category)
         console.log(category, 'category');
-        if(category === "All"){
-            setProductData(dummydata);
-        }else{
-            const filterPData = dummydata.filter((item) => (item.category === category))
-            setProductData(filterPData);
-            console.log(filterPData, 'filterPData');
-        }
+
     }
+
+    useEffect(() => {
+
+        let dublicatedummyArray = dummydata;
+
+        console.log(dublicatedummyArray, 'dublicatedummyArray');
+
+        if (selectedCategory !== "") {
+            dublicatedummyArray = dublicatedummyArray.filter((item) => item.category === selectedCategory)
+        }
+        
+        if (selectedCategory === "All") {
+            dublicatedummyArray = dummydata;
+        }
+
+        if (inputVal !== "") {
+            dublicatedummyArray = dummydata.filter((item) => item.name.toLowerCase().includes(inputVal.toLowerCase()))
+        }
+
+        setProductData(dublicatedummyArray)
+
+    }, [selectedCategory ,inputVal])
 
 
     return (
