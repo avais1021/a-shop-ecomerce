@@ -7,6 +7,13 @@
     background: rgb(3, 0, 40);
 }
 
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    min-height: 178px;
+}
+
 .navbar_bottom {
     background: rgb(45, 44, 44);
     padding: 10px 20px;

@@ -2,7 +2,7 @@
 import "./cartCard.css"
 import { MdDelete } from "react-icons/md";
 import { useDispatch } from 'react-redux';
-import { RemoveItem } from '../../reduxToolkit/store';
+import { RemoveItem } from '../../reduxToolkit/cartSlice';
 
 // const CartCard = ({ id, image, name, price }) => {
 const CartCard = ({ id, image, name, price }) => {

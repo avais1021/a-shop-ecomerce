@@ -3,11 +3,17 @@ import banner from '../../assets/banner.avif'
 import { category } from "../../category"
 import { dummydata } from "../../dummydata"
 import Product from "../../components/product/Product"
-import { useState } from "react"
+import { useEffect, useState } from "react"
+import { useSelector } from "react-redux"
 
 const Home = () => {
 
+  const searchVal = useSelector(state => state.dataSlice)
+
+  console.log(searchVal.serachVal,'searchVal');
+
   let [productData , setProductData] = useState(dummydata)
+  
 
   // console.log(productData,'productData');
 
@@ -17,6 +23,14 @@ const Home = () => {
       setProductData(filterPData);
       console.log(filterPData,'filterPData');
   }
+
+  const filterproductsCard = productData.filter((item) => {
+    return item.name.toLowerCase().includes(searchVal.serachVal.toLowerCase());
+  })
+
+  useEffect(() => {
+
+  } , [])
 
   return (
     <>
@@ -36,7 +50,8 @@ const Home = () => {
       </section>
 
       <section className="trending_products">
-        {productData.slice(0,7).map((data) => {
+        {/* {productData.slice(0,7).map((data) => { */}
+        {filterproductsCard.slice(0,7).map((data) => {
           return(
             <Product key={data.id} data={data} />
           )

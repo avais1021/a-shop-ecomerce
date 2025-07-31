@@ -2,7 +2,7 @@
 import "./Product.css"
 import { useDispatch } from 'react-redux';
 // import {AddItem} from "../../reduxToolkit/cartslice.js"
-import { AddItem } from '../../reduxToolkit/store';
+import { AddItem } from '../../reduxToolkit/cartSlice';
 
 const Product = ({ data }) => {
 
