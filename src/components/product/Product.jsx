@@ -10,7 +10,7 @@ const Product = ({ data }) => {
 
     const {id, name, price, category, image } = data;
     return (
-        <div className="product" onClick={() => dispatch(AddItem({id,name,image,price}))}>
+        <div className="product" >
             <div className="image">
                 <img src={image} alt="image" />
             </div>
@@ -18,7 +18,7 @@ const Product = ({ data }) => {
                 <p>{name}</p>
                 <p>{category}</p>
                 <p>{price}</p>
-                <button>Add +</button>
+                <button onClick={() => dispatch(AddItem({id,name,image,price}))} >Add +</button>
             </div>
         </div>
     )

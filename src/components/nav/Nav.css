@@ -11,6 +11,7 @@ header {
     top: 0;
     width: 100%;
     min-height: 178px;
+    z-index: 9;
 }
 
 .navbar_bottom {
@@ -90,8 +91,36 @@ header {
 }
 
 .navbar_bottom li {
-    color: white;
+  font-size: 20px;
+  color: #ffffff;
+  position: relative;
+  display: inline-block;
 }
+
+.navbar_bottom li::after,
+.navbar_bottom li::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #ff0000, #00ffff);
+  bottom: -5px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s ease-out;
+}
+
+.navbar_bottom li::before {
+  top: -5px;
+  transform-origin: left;
+}
+
+.navbar_bottom li:hover::after,
+.navbar_bottom li:hover::before {
+  transform: scaleX(1);
+}
+
 
 .totalValue {
     text-align: center;
@@ -99,6 +128,9 @@ header {
 
 .totalValue p {
     margin-bottom: 10px;
+}
+section.cart {
+    margin-left: 10%;
 }
 
 @media screen and (max-width : 768px) {

@@ -45,3 +45,10 @@
     position: relative;
     top: 3px;
 }
+
+@media screen and (max-width : 768px) {
+    .cartCard button {
+        padding: 4px 6px;
+        bottom: 10px;
+    }
+}

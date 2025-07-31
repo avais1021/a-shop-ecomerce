@@ -10,7 +10,7 @@ import { getSerachVal } from "../../reduxToolkit/dataSlice"
 const Home = () => {
   const dispatch = useDispatch();
   const searchVal = useSelector(state => state.dataSlice)
-  const [selectedCategory, setSelectedCategory] = useState("all")
+  const [selectedCategory, setSelectedCategory] = useState("")
   const [filteredProducts, setFilteredProducts] = useState(dummydata)
 
 
@@ -23,7 +23,7 @@ const Home = () => {
     let filtered = dummydata
 
     // 1. Filter by category
-    if (selectedCategory !== "all") {
+    if (selectedCategory !== "") {
       filtered = filtered.filter(item => item.category === selectedCategory)
     }
 
