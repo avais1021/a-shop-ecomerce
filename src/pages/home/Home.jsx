@@ -44,7 +44,7 @@ const Home = () => {
         <img src={banner} alt="banner" />
       </section>
 
-      <section className="categories">
+     {!searchVal.serachVal &&  <section className="categories">
         {category.slice(0, 5).map((item) => (
           <div
             className="items"
@@ -56,6 +56,7 @@ const Home = () => {
           </div>
         ))}
       </section>
+     }
 
       <section className="trending_products">
         {filteredProducts.slice(0, 7).map((data) => (

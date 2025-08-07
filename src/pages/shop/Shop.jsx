@@ -56,7 +56,7 @@ const Shop = () => {
                 <h1>Shop <span><FaShopify />  </span></h1>
             </section>
 
-            <section className="categories">
+         {!inputVal &&   <section className="categories">
                 {category.map((item) => {
                     return (
                         <div className="items" key={item.id} onClick={() => filterProduct(item.name)}>
@@ -66,6 +66,7 @@ const Shop = () => {
                     )
                 })}
             </section>
+         }
 
             <section className="trending_products">
                 {productData.map((data) => {
